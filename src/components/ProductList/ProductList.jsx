@@ -1,12 +1,14 @@
 import React from 'react';
 import { Row, Container } from 'react-bootstrap';
-import { products } from '../../data/products';
+import products from '../../data/products.json';
 
 import Product from '../Product/Product';
 
 const ProductList = ({ sortPrice, category, brand, size }) => {
-  const prods = products.map((p) => JSON.parse(JSON.stringify(p)));
-  //   console.log(prods);
+  // const prods = products.map((p) => JSON.parse(JSON.stringify(p)));
+
+  const prods = products;
+  console.log(prods);
 
   let items = [...prods];
 
